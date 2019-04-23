@@ -1037,7 +1037,7 @@ punycode@^2.1.0:
 
 "react-native-rename@https://github.com/marconett/react-native-rename":
   version "2.4.0"
-  resolved "https://github.com/marconett/react-native-rename#aac2c8b6599801aede4050ca8ae6595ce44ab536"
+  resolved "https://github.com/marconett/react-native-rename#a87c352fae24406d88af4a4e8e2a16ea12ba70e6"
   dependencies:
     cheerio "^0.22.0"
     colors "^1.1.2"
