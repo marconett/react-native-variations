@@ -3,10 +3,10 @@
 ## Installation
 ```
 # Using npm
-npm i --save react-native-variations
+npm i --save-dev react-native-variations
 
 # Using yarn
-yarn add react-native-variations
+yarn add --dev react-native-variations
 
 # Add the following to your package.json
 "scripts": {

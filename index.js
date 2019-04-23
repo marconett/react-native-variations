@@ -186,8 +186,7 @@ const runAndroid = (app) => {
   }
 
   // Android Clean
-  // let clean = spawnSync('./gradlew', ['clean'], { cwd: __dirname+'/android' });
-  let clean = spawnSync('ls');
+  let clean = spawnSync('./gradlew', ['clean'], { cwd: 'android' });
   if (clean.status || clean.error) {
     console.error('ERROR: Could not clean android project.');
     handleError(clean.error || clean.stderr.toString('utf8'));
