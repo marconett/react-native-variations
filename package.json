@@ -1,0 +1,20 @@
+{
+  "name": "ExampleApp",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "variation": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "cpr": "^3.0.1",
+    "plist": "^3.0.1",
+    "react-native-rename": "https://github.com/marconett/react-native-rename",
+    "replace-in-file": "^4.0.0",
+    "xcode": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
