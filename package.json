@@ -9,6 +9,11 @@
     "type": "git",
     "url": "git@github.com:marconett/react-native-variations.git"
   },
+  "keywords": [
+    "react-native",
+    "variations",
+    "whitelabel"
+  ],
   "main": "index.js",
   "scripts": {
     "variation": "./index.js"
