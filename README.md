@@ -1,5 +1,7 @@
 # react-native-variations
 
+Create variations of (whitelabel) apps and switch between variation-specific files and metadata using the command line.
+
 ## Installation
 ```
 # Using npm
@@ -86,3 +88,23 @@ signingConfigs {
 ### 5. Switching between variations
 
 Everything should be setup now. From now on, you can usethe `switch` command on the cli to switch between variations, for example: `yarn variation switch MySecondVariation`.
+
+
+## Other libraries / motivation
+
+There are other libraries with a similar goals out there:
+
+* [White Label App](https://github.com/hazmi/white-label-app)
+* [React Native White-label](https://github.com/welldsagl/create-white-label-app)
+* [MajoraJS](https://github.com/SperaHealth/majora)
+* [React Native continuous integration tools](https://github.com/najeeb-rifaat/react-native-ci-tools)
+
+However, I wanted leave my js code untouched. I usually maintain a `config.js` file with constants, texts, colors and feature toggles, which is the only file that is variation specific. The other libraries also don't focus on the release side of things like being able to switch between app logos, Application IDs and names.
+
+
+## Improvements, caveats, todos
+
+* Simply copying files seems a bit crude. Using symlinks might be the way to go.
+* This is currently not really optimized to keep a clean git repo.
+* IDs and display names are not validate for platform specific format requirements.
+* The react-native-rename dependency should be replaced.
