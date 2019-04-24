@@ -1,6 +1,6 @@
 {
   "name": "react-native-variations",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create variations of (whitelabel) apps and switch between variation-specific files and metadata using the command line.",
   "author": "Marco Nett <mail@marco-nett.de> (https://marco-nett.de)",
   "license": "MIT",

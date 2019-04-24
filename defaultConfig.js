@@ -4,7 +4,8 @@ const defaultConfig =
   'ios': {
     'id': 'com.example.app',
     'displayName': 'Example App',
-    'xcodeTeam': 'XXXXXXXXXX'
+    'xcodeTeam': 'XXXXXXXXXX',
+    'urlScheme': '',
   },
   'android': {
     'id': 'com.example.app',

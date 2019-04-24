@@ -10,7 +10,6 @@ const cpr = require('cpr');
 const replace = require('replace-in-file');
 
 const { defaultConfig } = require('./defaultConfig');
-// const { jsonFormater } = require('./utils');
 
 const rootDir = 'variations/';
 const confFile = 'apps.json';
@@ -107,6 +106,11 @@ const runiOS = (app, srcVariationPath) => {
 
       var obj = plist.parse(fs.readFileSync(infoPlist, 'utf8'));
       obj.CFBundleDisplayName = app.ios.displayName;
+
+      if (app.ios.urlScheme) {
+        obj.CFBundleURLTypes[0].CFBundleURLName = app.ios.urlScheme;
+        obj.CFBundleURLTypes[0].CFBundleURLSchemes[0] = app.ios.urlScheme;
+      }
 
       fs.writeFileSync(infoPlist, plist.build(obj), function(err) {
         if(err) {

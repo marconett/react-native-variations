@@ -60,11 +60,14 @@ In other words: It does not support files that are supposed to exist in one vari
 
 ### 3. Editing apps.json
 
-After adding a variation, you need to edit `variations/apps.json` to enter the variation/platform specific BundleIdentifier/ApplicationID, Display Name and Xcode Team. All key/value pairs are mandatory.
+After adding a variation, you need to edit `variations/apps.json` to enter the variation/platform specific BundleIdentifier/ApplicationID, Display Name and Xcode Team. All key/value pairs are mandatory with the exception of `ios.urlScheme`.
+
+Defining `ios.urlScheme` sets *Identifier* and *URL Schemes* of your first URL Type (see [Apple Docs](https://developer.apple.com/documentation/uikit/core_app/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app#3020456)).
+To do the same with Android, for now please just create a variation of `AndroidManifest.xml` (i.e. `variations/MyFirstVariation/android/app/src/main/AndroidManifest.xml`)
 
 ### 4. Android App signing
 
-To support switching between different signing key for Android, you need manually add signingConfigs to your `android/app/build.gradle` (see https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config) for each variation. The signingConfig must have the name of the variation.
+To support switching between different signing key for Android, you need manually add signingConfigs to your `android/app/build.gradle` (see [React Native Docs](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config)) for each variation. The signingConfig must have the name of the variation.
 
 For example:
 
@@ -108,3 +111,4 @@ However, I wanted leave my js code untouched. I usually maintain a `config.js` f
 * This is currently not really optimized to keep a clean git repo.
 * IDs and display names are not validate for platform specific format requirements.
 * The react-native-rename dependency should be replaced.
+* Manage AndroidManifest.xml.
