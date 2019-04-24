@@ -20,7 +20,8 @@ yarn add --dev react-native-variations
 
 ### 1. Adding variations
 
-Use the `add` command on the cli to add one or more variations, for example: `yarn variation add MyFirstVariation MySecondVariation`.
+Use the `add` command on the cli to add one or more variations, for example:
+`yarn variation add MyFirstVariation MySecondVariation`
 
 This will create a `variations/apps.json` with example values and the default folder structure for each variation:
 
@@ -47,7 +48,6 @@ The `ios/main_target/` folder is a bit special, as it resolves to the main Xcode
 
 ```
 ios/
-├── my_first_variation/
 ├── ReactNativeExampleApp/ <--- this one
 ├── ReactNativeExampleApp-tvOS/
 ├── ReactNativeExampleApp-tvOSTests/
@@ -67,7 +67,7 @@ To do the same with Android, for now please just create a variation of `AndroidM
 
 ### 4. Android App signing
 
-To support switching between different signing key for Android, you need manually add signingConfigs to your `android/app/build.gradle` (see [React Native Docs](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config)) for each variation. The signingConfig must have the name of the variation.
+To support switching between different signing key for Android, you need manually add *signingConfigs* to your `android/app/build.gradle` (see [React Native Docs](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config)) for each variation. The signingConfig must have the name of the variation.
 
 For example:
 
@@ -90,7 +90,8 @@ signingConfigs {
 
 ### 5. Switching between variations
 
-Everything should be setup now. From now on, you can use the `switch` command on the cli to switch between variations, for example: `yarn variation switch MySecondVariation`.
+Everything should be setup now. From now on, you can use the `switch` command on the cli to switch between variations, for example:
+`yarn variation switch MySecondVariation`
 
 
 ## Other libraries / motivation
