@@ -110,6 +110,6 @@ However, I wanted leave my js code untouched. I usually maintain a `config.js` f
 
 * Simply copying files seems a bit crude. Using symlinks might be the way to go.
 * This is currently not really optimized to keep a clean git repo.
-* IDs and display names are not validate for platform specific format requirements.
+* IDs and display names are not validated for platform specific format requirements.
 * The react-native-rename dependency should be replaced.
-* Manage AndroidManifest.xml.
+* AndroidManifest.xml should be managed in code.
