@@ -1,7 +1,8 @@
 {
   "name": "react-native-variations",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.1.0",
+  "author": "Marco Nett <mail@marco-nett.de> (https://marco-nett.de)",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "variation": "./index.js"
