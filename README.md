@@ -22,7 +22,7 @@ yarn add --dev react-native-variations
 
 Use the `add` command on the cli to add one or more variations, for example: `yarn variation add MyFirstVariation MySecondVariation`.
 
-This will create a `variations/apps.json` with example values and the the default folder structure for each variation:
+This will create a `variations/apps.json` with example values and the default folder structure for each variation:
 
 ```
   variations/
@@ -87,7 +87,7 @@ signingConfigs {
 
 ### 5. Switching between variations
 
-Everything should be setup now. From now on, you can usethe `switch` command on the cli to switch between variations, for example: `yarn variation switch MySecondVariation`.
+Everything should be setup now. From now on, you can use the `switch` command on the cli to switch between variations, for example: `yarn variation switch MySecondVariation`.
 
 
 ## Other libraries / motivation
