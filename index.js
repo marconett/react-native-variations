@@ -84,6 +84,11 @@ const switchTo = (variation) => {
 
   syncSrc(srcPath);
 
+  if (app.overwritePath) {
+    let overwritePath = rootDir+variation+'/'+app.overwritePath+'/';
+    syncOverwritePath(overwritePath, app.overwritePath);
+  }
+
   console.log('Done.');
 };
 
@@ -203,6 +208,14 @@ const syncSrc = (srcVariationPath) => {
   cpr(srcVariationPath, targetPath, {overwrite: true}, function(err) {
     if (err) {
       handleError('Error copying files from "'+srcVariationPath+'" to "'+targetPath+'"');
+    }
+  });
+};
+
+const syncOverwritePath = (overwriteSrc, overwriteTarget) => {
+  cpr(overwriteSrc, overwriteTarget, {deleteFirst: true}, function(err) {
+    if (err) {
+      handleError('Error copying files from "'+overwriteSrc+'" to "'+overwriteTarget+'"');
     }
   });
 };
