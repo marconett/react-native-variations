@@ -67,7 +67,7 @@ To do the same with Android, for now please just create a variation of `AndroidM
 
 ### 4. Android App signing
 
-To support switching between different signing key for Android, you need manually add *signingConfigs* to your `android/app/build.gradle` (see [React Native Docs](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config)) for each variation. The signingConfig must have the name of the variation.
+To support switching between different signing key for Android, you need to manually add *signingConfigs* to your `android/app/build.gradle` (see [React Native Docs](https://facebook.github.io/react-native/docs/signed-apk-android#adding-signing-config-to-your-app-s-gradle-config)) for each variation. The signingConfig must have the name of the variation.
 
 For example:
 
