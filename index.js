@@ -175,7 +175,7 @@ const syncAndroid = (srcVariationPath) => {
 const androidSigning = (app) => {
   const options = {
     files: 'android/app/build.gradle',
-    from: /signingConfig signingConfigs.*$/gm,
+    from: /signingConfig signingConfigs\.(?!debug).*$/gm,
     to: 'signingConfig signingConfigs.'+app.name,
   };
 
